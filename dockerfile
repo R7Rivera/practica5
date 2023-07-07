@@ -12,3 +12,5 @@ EXPOSE 3000
 
 # Inicia tu aplicación cuando se ejecute el contenedor
 CMD ["node", "index.js"]
+
+
