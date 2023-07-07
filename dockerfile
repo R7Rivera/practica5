@@ -1,16 +1,14 @@
-# Usa una imagen base de Node.js
+# Utilizar una imagen de Node.js como base
 FROM node:14
 
-# Establece el directorio de trabajo dentro del contenedor
+# Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
-# Copia los archivos de tu aplicación al directorio de trabajo
+# Copiar los archivos del proyecto al contenedor
 COPY index.js ./
 
-# Expone el puerto en el que tu aplicación está escuchando (ajusta el número de puerto según tu aplicación)
+# Exponer el puerto 3000
 EXPOSE 3000
 
-# Inicia tu aplicación cuando se ejecute el contenedor
-CMD ["node", "index.js"]
-
-
+# Comando para ejecutar la aplicación cuando se inicie el contenedor
+CMD [ "node", "index.js" ]
