@@ -15,10 +15,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Build Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag rosagra/practica5:1.0
 
     - name: Login to Docker Hub
       run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Push Docker image to Docker Hub
-      run: docker push practica5:$(date +%s)
+      run: docker push rosagra/practica5:1.0

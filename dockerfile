@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Copia los archivos de tu aplicación al directorio de trabajo
-COPY . /app
+COPY index.js ./
 
 # Expone el puerto en el que tu aplicación está escuchando (ajusta el número de puerto según tu aplicación)
 EXPOSE 3000
